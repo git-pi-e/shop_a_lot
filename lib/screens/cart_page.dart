@@ -65,7 +65,7 @@ class _CartPageState extends State<CartPage> {
 
                           if (productSnap.connectionState ==
                               ConnectionState.done) {
-                            Map _productMap = productSnap.data.data();
+                            Map _productMap = (productSnap.data as dynamic).data();
 
                             return Padding(
                               padding: const EdgeInsets.symmetric(
@@ -117,7 +117,7 @@ class _CartPageState extends State<CartPage> {
                                           ),
                                         ),
                                         Text(
-                                          "Size - ${document.data()['size']}",
+                                          "Size - ${(document.data() as dynamic)['size']}",
                                           style: TextStyle(
                                               fontSize: 16.0,
                                               color: Colors.black,

@@ -55,7 +55,7 @@ class _ProductPageState extends State<ProductPage> {
 
               if (snapshot.connectionState == ConnectionState.done) {
                 // Firebase Document Data Map
-                Map<String, dynamic> documentData = snapshot.data.data();
+                Map<String, dynamic> documentData = (snapshot.data as dynamic).data();
 
                 // List of images
                 List imageList = documentData['images'];

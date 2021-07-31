@@ -13,7 +13,7 @@ class CustomBtn extends StatelessWidget {
     bool _isLoading = isLoading ?? false;
 
     return GestureDetector(
-      onTap: onPressed,
+      onTap: onPressed(),
       child: Container(
         height: 65.0,
         decoration: BoxDecoration(

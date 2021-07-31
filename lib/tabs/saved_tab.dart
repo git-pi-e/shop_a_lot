@@ -34,7 +34,7 @@ class SavedTab extends StatelessWidget {
                     top: 108.0,
                     bottom: 12.0,
                   ),
-                  children: snapshot.data.docs.map((document) {
+                  children: snapshot.data!.docs.map((document) {
                     return GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -60,7 +60,7 @@ class SavedTab extends StatelessWidget {
 
                           if (productSnap.connectionState ==
                               ConnectionState.done) {
-                            Map _productMap = productSnap.data.data();
+                            Map _productMap = (productSnap.data! as dynamic).data();
 
                             return Padding(
                               padding: const EdgeInsets.symmetric(
@@ -112,7 +112,7 @@ class SavedTab extends StatelessWidget {
                                           ),
                                         ),
                                         Text(
-                                          "Size - ${document.data()['size']}",
+                                          "Size - ${(document.data() as dynamic)['size']}",
                                           style: TextStyle(
                                               fontSize: 16.0,
                                               color: Colors.black,
@@ -148,7 +148,7 @@ class SavedTab extends StatelessWidget {
           ),
           CustomActionBar(
             title: "Saved",
-            hasBackArrrow: false,
+            hasBackArrrow: false, hasBackground: true, hasTitle: true,
           ),
         ],
       ),

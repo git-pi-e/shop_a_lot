@@ -125,7 +125,8 @@ class _RegisterPageState extends State<RegisterPage> {
                     onSubmitted: (value) {
                       _passwordFocusNode.requestFocus();
                     },
-                    textInputAction: TextInputAction.next,
+                    textInputAction: TextInputAction.next, 
+                    isPasswordField: false,
                   ),
                   CustomInput(
                     hintText: "Password...",

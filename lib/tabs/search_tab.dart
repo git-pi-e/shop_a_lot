@@ -53,10 +53,11 @@ class _SearchTabState extends State<SearchTab> {
                     ),
                     children: snapshot.data!.docs.map((document) {
                       return ProductCard(
-                        title: document.data()['name'],
-                        imageUrl: document.data()['images'][0],
-                        price: "\$${document.data()['price']}",
-                        productId: document.id,
+                        title: (document.data() as dynamic)['name'],
+                        imageUrl: (document.data() as dynamic)['images'][0],
+                        price: "\$${(document.data() as dynamic)['price']}",
+                        productId: document.id, 
+                        onPressed: () {},
                       );
                     }).toList(),
                   );
@@ -80,7 +81,11 @@ class _SearchTabState extends State<SearchTab> {
                 setState(() {
                   _searchString = value.toLowerCase();
                 });
-              }, onChanged: (String ) {  },
+              },
+              onChanged: (String) {}, 
+              isPasswordField: false, 
+              textInputAction: null, 
+              focusNode: null, 
             ),
           ),
         ],

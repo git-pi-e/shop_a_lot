@@ -8,7 +8,7 @@ class ProductCard extends StatelessWidget {
   final String imageUrl;
   final String title;
   final String price;
-  ProductCard({required this.onPressed, required this.imageUrl, this.title, this.price, this.productId});
+  ProductCard({required this.onPressed, required this.imageUrl, required this.title, required this.price, required this.productId});
 
   @override
   Widget build(BuildContext context) {

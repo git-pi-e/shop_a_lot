@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class BottomTabs extends StatefulWidget {
   final int selectedTab;
   final Function(int) tabPressed;
-  BottomTabs({this.selectedTab, this.tabPressed});
+  BottomTabs({required this.selectedTab, required this.tabPressed});
 
   @override
   _BottomTabsState createState() => _BottomTabsState();
@@ -16,7 +16,7 @@ class _BottomTabsState extends State<BottomTabs> {
 
   @override
   Widget build(BuildContext context) {
-    _selectedTab = widget.selectedTab ?? 0;
+    _selectedTab = widget.selectedTab;
 
     return Container(
       decoration: BoxDecoration(
@@ -74,14 +74,14 @@ class BottomTabBtn extends StatelessWidget {
   final String imagePath;
   final bool selected;
   final Function onPressed;
-  BottomTabBtn({this.imagePath, this.selected, this.onPressed});
+  BottomTabBtn({required this.imagePath, required this.selected, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    bool _selected = selected ?? false;
+    bool _selected = selected;
 
     return GestureDetector(
-      onTap: onPressed,
+      onTap: onPressed(),
       child: Container(
         padding: EdgeInsets.symmetric(
           vertical: 28.0,

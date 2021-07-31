@@ -8,7 +8,7 @@ class CustomInput extends StatelessWidget {
   final FocusNode focusNode;
   final TextInputAction textInputAction;
   final bool isPasswordField;
-  CustomInput({required this.hintText, required this.onChanged, this.onSubmitted, this.focusNode, this.textInputAction, this.isPasswordField});
+  CustomInput({required this.hintText, required this.onChanged, required this.onSubmitted, required this.focusNode, required this.textInputAction, required this.isPasswordField});
 
   @override
   Widget build(BuildContext context) {

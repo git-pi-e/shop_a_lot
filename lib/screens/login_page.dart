@@ -123,7 +123,7 @@ class _LoginPageState extends State<LoginPage> {
                     onSubmitted: (value) {
                       _passwordFocusNode.requestFocus();
                     },
-                    textInputAction: TextInputAction.next,
+                    textInputAction: TextInputAction.next, isPasswordField: null, focusNode: null,
                   ),
                   CustomInput(
                     hintText: "Password...",
@@ -134,14 +134,16 @@ class _LoginPageState extends State<LoginPage> {
                     isPasswordField: true,
                     onSubmitted: (value) {
                       _submitForm();
-                    },
+                    }, 
+                    textInputAction: null,
                   ),
                   CustomBtn(
                     text: "Login",
                     onPressed: () {
                       _submitForm();
                     },
-                    isLoading: _loginFormLoading,
+                    isLoading: _loginFormLoading, 
+                    outlineBtn: null,
                   )
                 ],
               ),
@@ -157,7 +159,8 @@ class _LoginPageState extends State<LoginPage> {
                       MaterialPageRoute(builder: (context) => RegisterPage()),
                     );
                   },
-                  outlineBtn: true,
+                  outlineBtn: true, 
+                  isLoading: false,
                 ),
               ),
             ],

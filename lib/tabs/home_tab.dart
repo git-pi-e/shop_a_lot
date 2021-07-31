@@ -31,12 +31,12 @@ class HomeTab extends StatelessWidget {
                     top: 108.0,
                     bottom: 12.0,
                   ),
-                  children: snapshot.data.docs.map((document) {
+                  children: snapshot.data!.docs.map((document) {
                     return ProductCard(
-                      title: document.data()['name'],
-                      imageUrl: document.data()['images'][0],
-                      price: "\$${document.data()['price']}",
-                      productId: document.id,
+                      title: (document.data() as dynamic)['name'],
+                      imageUrl: (document.data() as dynamic)['images'][0],
+                      price: "\$${(document.data() as dynamic)['price']}",
+                      productId: document.id, onPressed: () {},
                     );
                   }).toList(),
                 );
@@ -52,7 +52,7 @@ class HomeTab extends StatelessWidget {
           ),
           CustomActionBar(
             title: "Home",
-            hasBackArrrow: false,
+            hasBackArrrow: false, hasTitle: true, hasBackground: false,
           ),
         ],
       ),
