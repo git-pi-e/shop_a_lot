@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "619711309471",
+    "project_id": "shop-a-lot-c137",
+    "storage_bucket": "shop-a-lot-c137.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619711309471:android:35e6265f27d0dfafa124aa",
+        "android_client_info": {
+          "package_name": "com.piapps.shop_a_lot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619711309471-0qn3h07v8gqei3vgmqlpvcgt67viaruv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxFlQBbF7Donu0S6f4U0_e00o0PF_dXA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619711309471-0qn3h07v8gqei3vgmqlpvcgt67viaruv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
