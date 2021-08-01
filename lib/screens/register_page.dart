@@ -126,7 +126,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       _passwordFocusNode.requestFocus();
                     },
                     textInputAction: TextInputAction.next, 
-                    isPasswordField: false,
+                    isPasswordField: false, 
+                    focusNode: FocusNode(),
                   ),
                   CustomInput(
                     hintText: "Password...",
@@ -137,14 +138,16 @@ class _RegisterPageState extends State<RegisterPage> {
                     isPasswordField: true,
                     onSubmitted: (value) {
                       _submitForm();
-                    },
+                    }, 
+                    textInputAction: TextInputAction.next,
                   ),
                   CustomBtn(
                     text: "Create New Account",
                     onPressed: () {
                       _submitForm();
                     },
-                    isLoading: _registerFormLoading,
+                    isLoading: _registerFormLoading, 
+                    outlineBtn: false,
                   )
                 ],
               ),
@@ -157,7 +160,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  outlineBtn: true,
+                  outlineBtn: true, 
+                  isLoading: false,
                 ),
               ),
             ],

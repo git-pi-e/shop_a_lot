@@ -9,8 +9,8 @@ class CustomBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool _outlineBtn = outlineBtn ?? false;
-    bool _isLoading = isLoading ?? false;
+    bool _outlineBtn = outlineBtn;
+    bool _isLoading = isLoading;
 
     return GestureDetector(
       onTap: onPressed(),
@@ -36,7 +36,7 @@ class CustomBtn extends StatelessWidget {
               visible: _isLoading ? false : true,
               child: Center(
                 child: Text(
-                  text ?? "Text",
+                  text,
                   style: TextStyle(
                     fontSize: 16.0,
                     color: _outlineBtn ? Colors.black : Colors.white,

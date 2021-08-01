@@ -123,7 +123,9 @@ class _LoginPageState extends State<LoginPage> {
                     onSubmitted: (value) {
                       _passwordFocusNode.requestFocus();
                     },
-                    textInputAction: TextInputAction.next, isPasswordField: null, focusNode: null,
+                    textInputAction: TextInputAction.next, 
+                    isPasswordField: false,
+                    focusNode: FocusNode(),
                   ),
                   CustomInput(
                     hintText: "Password...",
@@ -135,7 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                     onSubmitted: (value) {
                       _submitForm();
                     }, 
-                    textInputAction: null,
+                    textInputAction: TextInputAction.done,
                   ),
                   CustomBtn(
                     text: "Login",
@@ -143,7 +145,7 @@ class _LoginPageState extends State<LoginPage> {
                       _submitForm();
                     },
                     isLoading: _loginFormLoading, 
-                    outlineBtn: null,
+                    outlineBtn: false,
                   )
                 ],
               ),

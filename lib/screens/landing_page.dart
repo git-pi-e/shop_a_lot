@@ -15,7 +15,7 @@ class LandingPage extends StatelessWidget {
       builder: (context, snapshot) {
         // If Firebase App init, snapshot has error
         if (snapshot.hasError) {
-          return Scaffold  (
+          return Scaffold(
             body: Center(
               child: Text('Error: ${snapshot.error}'),
             ),
@@ -70,7 +70,7 @@ class LandingPage extends StatelessWidget {
         return Scaffold(
           body: Center(
             child: Text(
-              "Initialization App...",
+              "Initializing App...",
               style: Constants.regularHeading,
             ),
           ),

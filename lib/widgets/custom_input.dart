@@ -12,7 +12,7 @@ class CustomInput extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool _isPasswordField = isPasswordField ?? false;
+    bool _isPasswordField = isPasswordField;
 
     return Container(
       margin: EdgeInsets.symmetric(
@@ -31,7 +31,7 @@ class CustomInput extends StatelessWidget {
         textInputAction: textInputAction,
         decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: hintText ?? "Hint Text...",
+          hintText: hintText,
           contentPadding: EdgeInsets.symmetric(
             horizontal: 24.0,
             vertical: 20.0,

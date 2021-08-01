@@ -20,9 +20,9 @@ class CustomActionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool _hasBackArrow = hasBackArrrow ?? false;
-    bool _hasTitle = hasTitle ?? true;
-    bool _hasBackground = hasBackground ?? true;
+    bool _hasBackArrow = hasBackArrrow;
+    bool _hasTitle = hasTitle;
+    bool _hasBackground = hasBackground;
 
     return Container(
       decoration: BoxDecoration(
@@ -69,7 +69,7 @@ class CustomActionBar extends StatelessWidget {
             ),
           if(_hasTitle)
             Text(
-              title ?? "Action Bar",
+              title,
               style: Constants.boldHeading,
             ),
           GestureDetector(
@@ -97,7 +97,7 @@ class CustomActionBar extends StatelessWidget {
                   }
 
                   return Text(
-                    "$_totalItems" ?? "0",
+                    "$_totalItems",
                     style: TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.w600,
